@@ -1,0 +1,33 @@
+{
+  "name": "my-server",
+  "version": "1.0.0",
+  "description": "Boilerplate for React and Express",
+  "main": "server-app.js",
+  "scripts": {
+    "client-instsall": "cd client && npm install",
+    "start": "node server-app.js",
+    "server": "nodemon --inspect server-app.js",
+    "client": "npm start ../client/package.json",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "debug": "concurrently \"nodemon --inspect server-app.js\" \"npm client\""
+  },
+  "author": "Martin Mihálik",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "cloudinary": "^1.13.2",
+    "concurrently": "^4.1.0",
+    "connect-mongodb-session": "^2.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.4.19",
+    "multer": "^1.4.1",
+    "multer-storage-cloudinary": "^2.2.1",
+    "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
